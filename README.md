@@ -1,9 +1,11 @@
 # Eazypayout App
 
 ## Overview
+This project is a web application that allows users to view and manage company accounts and transactions. The frontend is built with React, and the backend is powered by Express.js with MongoDB as the database. 
+
+
 ![eazypayout](https://github.com/user-attachments/assets/52d0d25e-efa8-4cf7-96bc-eb97e391f040)
 
-This project is a web application that allows users to view and manage company accounts and transactions. The frontend is built with React, and the backend is powered by Express.js with MongoDB as the database. 
 
 ## Features
 
