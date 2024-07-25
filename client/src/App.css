@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  padding-top: 32px;
+  width: 220px;
+  /* background-color: #f4f4f9; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #efefef;
+  /* Add grey border */
+}
+
+.logo-image {
+  width: 70px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  /* Changed color to black */
+  margin: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+nav ul li {
+  padding: 16px;
+  cursor: pointer;
+  color: #424242;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li.active {
+  font-weight: bold;
+  background-color: #00005C;
+  color: #ffffff;
+  padding-left: 16px;
+}
+
+nav ul li .icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+nav ul li .stat-icon {
+  color: #CACACA;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.logout {
+  background: none;
+  border: none;
+  color: #000000;
+  /* Changed color to black */
+  cursor: pointer;
+  padding: 16px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.logout .icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 32px;
+  border-radius: 5px;
+  margin: 64px 16px;
+  position: relative;
+  width: 365.67px;
+  height: 108px;
+}
+
+.balance-content {
+  display: flex;
+  align-items: center;
+}
+
+.balance-image {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.balance-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-label {
+  font-size: 16px;
+  color: #757575;
+}
+
+.balance-amount {
+  font-size: 16px;
+  color: #23b361;
+}
+
+.filters {
+  display: flex;
+  gap: 43px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px 30px 10px 10px;
+  /* Adjust padding to make room for the arrow */
+  font-size: 14px;
+  color: #424242;
+  position: relative;
+  background-image: url('../public/arrow.svg');
+  /* Path to your custom SVG */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  /* Shift the arrow to the left */
+}
+
+.company-select {
+  margin-right: 10px;
+  /* Optional: Add some space between the selects */
+}
+
+.account-select {
+  margin-left: 10px;
+  /* Optional: Add some space between the selects */
+}
+
+.company-select,
+.account-select {
+  width: 220px;
+  height: 56px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  color: #424242;
+}
+
+.transactions {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.transactions h4 {
+  font-family: 'Nunito';
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #424242;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  padding-top: 10px;
+  color: #333333;
+  background-color: #F5F5F5;
+  height: 55px;
+  padding-left: 9px;
+  /* Set a specific height */
+  vertical-align: middle;
+}
+
+tbody td {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #424242;
+  padding-left: 9px;
+
+}
+
+.cred {
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    padding: 10px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters {
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .company-select,
+  .account-select {
+    width: 100%;
+  }
+
+  .balance {
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+
+
+  tbody td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  tbody td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .balance-label {
+    font-size: 14px;
+  }
+
+  .balance-amount {
+    font-size: 18px;
+  }
+
+  .transactions h4 {
+    font-family: 'Nunito';
+    font-size: 16px;
+  }
+}
+
+.logo-image {
+  width: 70px;
+  margin-left: 45px;
+}
